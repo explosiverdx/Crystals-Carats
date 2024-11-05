@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FED7BA;
+    scroll-behavior: smooth;
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    font-family: "Poppins";
+    align-items: center;
+}
+.logo {
+    width: 200px;
+}
+.nav {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    font-size: 24px;
+}
+.nav a:hover {
+    color:#8B0000;    ;
+}
+.nav li {
+    list-style: none;
+}
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+.form {
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    background-color: #dbb5b5;
+}
+.form {
+    display: none;
+}
+.form img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form-nav {
+    color: #D27F7F;
+    display: flex;
+    background-color: #dbb5b5;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid white;
+    font-weight: 600;
+    font-size: 18px;
+}
+.desc {
+    background-color: #dbb5b5;
+    color: white;
+    padding: 1rem 1rem;
+    font-style: italic;
+    text-align: center;
+}
+.form-nav i {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+}
+.form-nav p {
+    background-color: transparent;
+}
+.active  {
+    border-bottom: 2px solid #D27F7F;
+}
+.btn-verify {
+    height: 30px;
+    border: none;
+    background-color: #D27F7F;
+    color: white;
+    padding-inline: 1rem;
+}
+.verify {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dbb5b5;
+}
+.verify input {
+    border: none;
+}
+.login {
+    display: none;
+    background-color: white;
+    height: 100%;
+}
+.signin {
+    background-color: white;
+    height: 100%;
+}
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #dbb5b5;
+    padding: 2rem 2rem;
+    gap: 1rem;
+}
+.login .form-nav{
+    background-color: white;
+    border-bottom: 1px solid #D27F7F;
+}
+.login p {
+    background-color: transparent;
+}
+.google-btn {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    height: 40px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding-inline: 1rem;
+    margin-bottom: 2rem;
+}
+.google-btn i {
+    background-color: transparent;
+    display: flex;
+    justify-self: flex-start;
+}
+.info {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.bottom-login-container {
+    background-color: white;
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    font-size: 14px;
+}
+.sign-nav-2 {
+    color: #D27F7F;
+    border-bottom: 1px solid #D27F7F;
+}
+.login .form-nav p {
+    background-color: white;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem 2rem;
+    gap: 1rem;
+}
+.login-container .input {
+    background-color: white;
+    border-bottom: 1px solid #D27F7F;
+}
+.form-btn {
+    height: 40px;
+    border: none;
+    background-color: #D27F7F;
+    color: white;
+    font-size: 14px;
+}
+.input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: #dbb5b5;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+}
+::placeholder {
+    color: #D27F7F;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: #D27F7F;
+  }
+.terms-condition {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #dbb5b5;
+}
+#form span {
+    background-color: #dbb5b5;
+}
+.top-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 1rem;
+    padding: 3rem 20%;
+    height: 600px;
+}
+.top-container  :nth-child(1) {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.top-carousel {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.top-carousel-slider, .second-carousel-slider, .third-carousel-slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.top-container :nth-child(2) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.top-container :nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.top-container img {
+    position: relative;
+    border: 1px solid;
+    display: flex;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    transition: ease-in 350ms;
+}
+.second-container {
+    font-family: "Nunito Sans";
+}
+.second-container-heading {
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    color: #8B0000;
+    margin-top:2rem;
+}
+.second-container-desc {
+    color: #716C6C;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 0 4px 4px #00000040;
+    margin-bottom: 1rem;
+}
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding:3rem 1rem;
+    background-color: white;
+}
+.category-container div {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    background-color: white;
+}
+
+.category-container div :first-child {
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 32px;
+    margin: 1rem 0;
+    background-color: white;
+}
+.shadow-red {
+    box-shadow: 10px 10px 4px #84292B;
+}
+.shadow-cream {
+    box-shadow: 10px 10px 4px #FED7BA;
+}
+.category-container img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: block;
+    margin-inline: auto;
+    background-color: white;
+}
+.third-container {
+    font-family: "Nunito Sans";
+}
+
+.third-container-desc {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #716C6C;
+}
+.best-sellers {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1rem 3rem;
+    gap: 1rem;
+    justify-content: center;
+}
+.best-sellers img {
+    width: 200px;
+    height: 200px;
+    box-shadow: 10px 10px 4px #8B0000;
+    border: 1px solid;
+}
+.best-sellers figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.best-sellers figcaption {
+    margin-top: 1rem;
+    background-color: transparent;
+}
+.trend-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.trend-container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.red-box {
+    background-color: #84292B;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.red-box img {
+    background-color: transparent;
+    width: 150px;
+    height: 250px;
+}
+.forth-container {
+    width: 90%;
+    margin-inline: auto;
+    background-image: url("images/gc3.jpg");
+    background-size: 100% 100%;
+    height: 600px;
+    font-family: "Nunito Sans";
+}
+.forth-container-heading {
+    background-color: rgba(0, 0, 0, 0.497);
+    text-align: center;
+    color: white;
+    padding-top: 300px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.img-gen {
+    height: 250px;
+    width: 200px;
+}
+.red-container {
+    background-color: #84292B;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    padding: 2rem 0;
+    justify-content: center;
+}
+.red-container img {
+    background-color: transparent;
+    border-radius: 12px;
+}
+.red-container div {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.video-carousel {
+    display: block;
+    margin-inline: auto;
+}
+.video-1[aria-disabled="true"] {
+    display: none;
+} 
+.video-2[aria-disabled="false"] {
+    display: none;
+}
+.main-footer {
+    background-color: #D9D9D9;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1rem 2rem; 
+    font-family: "Nunito Sans";
+    margin-top: 2rem;
+}
+.main-footer li {
+    list-style: none;
+}
+.main-footer ul {
+    display: block;
+    margin-inline: auto;
+}
+.list-heading {
+    color: #8B0000;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.main-footer div, .main-footer ul, .main-footer li, .main-footer i, .main-footer p {
+    background-color: transparent;
+}
+.socials {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.socials p {
+    color: #8B0000;
+    font-weight: bold;
+}
+.copyright {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Nunito Sans";
+    color: #8B0000;
+    font-weight: 600;
+}
+
+/* @media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form {
+        position: static;
+        transform: none;
+    }
+
+
+} */
+
+
+/* General adjustments for mobile devices (including iPhone 14 Pro Max) */
+@media only screen and (max-width: 768px) {
+    /* Top container grid layout */
+    .top-container {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Second container content arrangement */
+    .second-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Category container grid layout */
+    .category-container {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Adjust font sizes for readability */
+    .second-container-heading,
+    .third-container-desc,
+    .best-sellers figcaption,
+    .forth-container-heading {
+      font-size: 24px; /* Adjust as needed */
+    }
+  
+    /* Other mobile-specific adjustments */
+    /* ... */
+  }
+  
+  /* Specific adjustments for iPhone 14 Pro Max (if necessary) */
+  @media only screen and (width: 430px) and (height: 932px) and (-webkit-device-pixel-ratio: 3) {
+    /* Specific styles for iPhone 14 Pro Max */
+    /* For example, fine-tuning font sizes or margins for optimal appearance */
+  }
